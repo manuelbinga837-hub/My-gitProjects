@@ -4,7 +4,42 @@
 <head>
 		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
 		<title>jogoDaAdivinhacao</title>
-		<link rel="stylesheet" href="cssDoJogo.css">
+		<style>
+			body{
+  background: #0f172a;
+  text-align: center;
+  font-family:Arial, sans-serif;
+}
+h3{
+  color:#ffffff;
+  font-size: 26px;
+}
+#num{
+  background: #1e293b;
+  color:#ffffff;
+  width:200px;
+  height: 40px;
+  box-shadow: 5px 5px 5px #334155;
+  border-radius: 10px;
+}
+#but{
+  background: #22c55e;
+  color:#ffffff;
+  width:120px;
+  height: 40px;
+  border-radius: 10px;
+}
+#res{
+  color:#ffffff;
+}
+#reset{
+  background: #ef4444;
+  color:#ffffff;
+  width:120px;
+  height: 40px;
+  border-radius:10px;
+}
+		</style>
 </head>
 <body>
 		<h3>Jogo Da Adivinhação</h3><br>
@@ -16,7 +51,36 @@
 		<button onclick="reiniciar()" id="reset">Reiniciar</button>
 		
 		
-		<script src="jsDoJogo.js">
+		<script >
+			let segredo = Math.floor(Math.random() * 5) + 1;
+function clicar(){
+    let res=document.getElementById("res")
+    
+    let tentativa=parseInt(document.getElementById("num").value);
+    
+    if(tentativa==segredo){
+        res.innerHTML="Certa resposta!"
+        res.style.color="green"
+    }else{
+        
+        if(tentativa<segredo){
+            res.innerHTML=" Resposta errada <br> tente um número maior!"
+        }else{
+            res.innerHTML=" Resposta errada <br> tente um número menor!"
+        }
+        res.style.color="red"
+    }
+    
+    
+}
+
+function reiniciar(){
+    let segredo = Math.floor(Math.random() * 5) + 1;
+    document.getElementById("num").value="";
+    document.getElementById("res").innerHTML="";
+}
+
+
 		</script>
 		
 </body>
