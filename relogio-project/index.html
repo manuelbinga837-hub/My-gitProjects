@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+		<title>relogio digital</title>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+		<style>
+		body{
+				background:#0f172a;
+		}
+		#dashb{
+		 		padding-top:2px;
+    width:350px;
+    height:250px;
+    background:#f8fafc;
+
+    margin:auto;
+    margin-top:100px;
+
+    border-radius:18px;
+
+    text-align:center;
+}
+		h2{
+    
+				   color: #0f172a;
+				  font-family: Orbitron, sans-serif;
+    
+    font-size: 24px;
+    
+}
+
+		#hora-box{
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 2px solid #22c55e;
+    border-radius: 12px;
+
+    background: #0f172a;
+}
+		#hora{
+    color: #22c55e;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+
+    text-align: center;
+}
+		#data{
+    color: #64748b;
+    font-size: 18px;
+    font-family: Exo 2, sans-serif;
+}
+		
+		</style>
+</head>
+<body>
+		<div id="dashb">
+
+    <h2>RELÓGIO DIGITAL</h2>
+
+    <div id="hora-box">
+    <div id="hora"></div>
+</div><br><br>
+
+    <div id="data"></div>
+
+</div>
+		<script>
+		  let hora=document.getElementById("hora");
+		  let data=document.getElementById("data");
+		
+		  function formatar(n){
+    return n < 10 ? "0" + n : n;
+}
+		
+		
+		
+		  function mostrarHora(){
+		  		let agora=new Date();
+		  		let h=formatar(agora.getHours());
+		  		let m=formatar(agora.getMinutes());
+		  		let s=formatar(agora.getSeconds());
+		  		
+		  		hora.innerHTML=h + ":" + m + ":" + s;
+		  }
+		  mostrarHora();
+		  setInterval(mostrarHora,1000);
+		
+		
+		 function mostrarData(){
+		 		let hoje=new Date();
+		 		let dia=formatar(hoje.getDate());
+		 		let mes=formatar(hoje.getMonth());
+		 		let ano=formatar(hoje.getFullYear());
+		 		
+		 		data.innerHTML=dia + "/" + mes + "/" + ano;
+		 		
+		 }
+		
+  		
+		  mostrarData();
+		  
+		
+		 
+		</script>
+		
+</body>
+  </html>
+  
