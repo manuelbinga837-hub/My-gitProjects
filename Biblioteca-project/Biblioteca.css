@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#eef2f7;
+
+}
+
+header{
+
+    background:#1b3a57;
+    color:white;
+    text-align:center;
+    padding:25px;
+
+}
+
+header h1{
+
+    font-size:35px;
+
+}
+
+header p{
+
+    margin-top:10px;
+
+}
+
+main{
+
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+
+}
+
+.card{
+
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.card h2{
+
+    color:#1b3a57;
+    margin-bottom:20px;
+
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+button{
+
+    background:#1b3a57;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#28527a;
+
+}
+
+.pesquisa{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.pesquisa input{
+
+    flex:1;
+    margin-bottom:0;
+
+}
+
+.livro{
+
+    border-left:6px solid #1b3a57;
+    background:#f7f9fc;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+
+}
+
+.livro h3{
+
+    color:#1b3a57;
+    margin-bottom:8px;
+
+}
+
+.livro p{
+
+    margin:5px 0;
+
+}
+
+.acoes{
+
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+    flex-wrap:wrap;
+
+}
+
+.acoes button{
+
+    flex:1;
+}
+
+.btnEmprestar{
+
+    background:#27ae60;
+
+}
+
+.btnDevolver{
+
+    background:#f39c12;
+
+}
+
+.btnEditar{
+
+    background:#3498db;
+
+}
+
+.btnRemover{
+
+    background:#e74c3c;
+
+}
