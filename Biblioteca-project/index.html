@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Biblioteca</title>
+
+    <link rel="stylesheet" href="Biblioteca.css">
+</head>
+
+<body>
+
+<header>
+
+    <h2>📚 Minha Biblioteca</h2>
+    <p>Gerencie seus livros favoritos</p>
+
+</header>
+
+<main>
+
+    <!-- Cadastro -->
+
+    <section class="card">
+
+        <h2>Cadastrar Livro</h2>
+
+        <input type="text" id="titulo" placeholder="Título do livro">
+
+        <input type="text" id="autor" placeholder="Autor">
+
+        <input type="number" id="paginas" placeholder="Número de páginas">
+
+        <button id="btnCadastrar">
+            Cadastrar Livro
+        </button>
+
+    </section>
+
+
+    <!-- Pesquisa -->
+
+    <section class="card">
+
+        <h2>Pesquisar Livro</h2>
+
+        <div class="pesquisa">
+
+            <input type="text" id="pesquisa" placeholder="Digite o título">
+
+            <button id="btnPesquisar">
+                Pesquisar
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Lista -->
+
+    <section class="card">
+
+        <h2>Livros Cadastrados</h2>
+
+        <div id="listaLivros">
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="Biblioteca.js"></script>
+
+</body>
+
+          </html>
