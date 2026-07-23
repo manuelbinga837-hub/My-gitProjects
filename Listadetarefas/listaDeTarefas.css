@@ -1,0 +1,59 @@
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+
+header{
+
+    background:#1e3a8a;
+    color:white;
+    padding:20px;
+    text-align:center;
+
+}
+
+
+.app{
+
+    padding:20px;
+
+}
+
+
+input{
+
+    width:100%;
+    padding:12px;
+    font-size:16px;
+
+}
+
+
+button{
+
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+
+}
+
+
+#lista p{
+
+    background:white;
+    padding:12px;
+    margin-top:10px;
+    border-radius:5px;
+
+}
