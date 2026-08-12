@@ -1,0 +1,1047 @@
+/* =========================================
+   BELEZA & SABOR
+   CONFIGURAÇÃO GERAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #8b4513;
+    --cor-secundaria: #d4a373;
+    --cor-destaque: #f4a261;
+    --cor-fundo: #fffaf5;
+    --cor-branco: #ffffff;
+    --cor-texto: #333333;
+    --cor-texto-claro: #777777;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+/* =========================================
+   ETAPA 2 — HEADER + LOGO
+   ========================================= */
+
+header {
+    width: 100%;
+    background-color: var(--cor-branco);
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 1000;
+}
+
+/* Área do logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Imagem do logo */
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Nome da empresa */
+
+.logo h1 {
+    font-size: 20px;
+    color: var(--cor-principal);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Pequena descrição do logo */
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    color: var(--cor-texto-claro);
+    margin-top: 2px;
+}
+/* =========================================
+   ETAPA 3 — MENU DE NAVEGAÇÃO
+   ========================================= */
+
+nav {
+    width: 100%;
+    background-color: var(--cor-principal);
+    padding: 10px 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+    min-height: 46px;
+
+    padding: 12px 20px;
+
+    background-color: var(--cor-branco);
+    color: var(--cor-principal);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.25s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.22);
+}
+
+nav ul li a:active {
+    transform: scale(0.94);
+}
+
+/* =========================================
+   ETAPA 4 — CONTEÚDO E ESPAÇAMENTO
+   ========================================= */
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 15px 40px;
+}
+
+/* Cada seção do site */
+
+section {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+/* Títulos das seções */
+
+section h2 {
+    color: var(--cor-principal);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Texto de apresentação */
+
+section > p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: var(--cor-texto-claro);
+    font-size: 15px;
+}
+
+/* Títulos menores */
+
+section h3 {
+    color: var(--cor-principal);
+    font-size: 20px;
+    margin: 25px 0 15px;
+}
+
+/* Separação visual entre áreas */
+
+.conteudo {
+    background-color: var(--cor-branco);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+/* =========================================
+   ETAPA 5 — CARROSSÉIS
+   ========================================= */
+
+.carousel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Área de cada imagem */
+
+.carousel-item {
+    height: 280px;
+}
+
+/* Imagens */
+
+.carousel-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Botões anterior e próximo */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 12%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Ícones das setas */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Indicadores */
+
+.carousel-indicators {
+    margin-bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+/* Transição suave do carrossel */
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-inner {
+    background-color: var(--cor-branco);
+    overflow: hidden;
+}
+/* =========================================
+   ETAPA 6 — SERVIÇOS DE TRANÇAS
+   ========================================= */
+
+.servicos-trancas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.servico-tranca {
+    background-color: #fff;
+    padding: 16px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(139, 69, 19, 0.12);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.servico-tranca:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.servico-tranca h4 {
+    color: var(--cor-principal);
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.servico-tranca p {
+    color: var(--cor-texto-claro);
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Título da área de serviços */
+
+.titulo-servicos {
+    text-align: center;
+    color: var(--cor-principal);
+    font-size: 20px;
+    margin: 25px 0 15px;
+}
+/* =========================================
+   ETAPA 7 — FAST FOOD
+   ========================================= */
+
+.menu-fastfood {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.item-fastfood {
+    background-color: #fff;
+    padding: 16px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(244, 162, 97, 0.25);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.item-fastfood:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.item-fastfood h4 {
+    color: var(--cor-principal);
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.item-fastfood p {
+    color: var(--cor-texto-claro);
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Título do menu */
+
+.titulo-fastfood {
+    text-align: center;
+    color: var(--cor-principal);
+    font-size: 20px;
+    margin: 25px 0 15px;
+}
+/* =========================================
+   ETAPA 8 — BOTÕES DE AÇÃO
+   ========================================= */
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-width: 140px;
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.btn-acao:hover {
+    background-color: #6f350e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-acao:active {
+    transform: scale(0.96);
+}
+
+/* Botão de contacto */
+
+.btn-contato {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+.btn-contato:hover {
+    background-color: #e89555;
+}
+
+/* =========================================
+   MODAL DE CONTATO
+   ========================================= */
+
+.modal-contato {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    z-index: 2000;
+}
+
+.modal-contato.ativo {
+    display: flex;
+}
+
+.modal-caixa {
+    width: 100%;
+    max-width: 360px;
+
+    background-color: var(--cor-branco);
+
+    padding: 25px 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+    animation: aparecerModal 0.25s ease;
+}
+
+.modal-caixa h3 {
+    margin-bottom: 8px;
+    color: var(--cor-principal);
+    font-size: 22px;
+}
+
+.modal-caixa p {
+    margin-bottom: 20px;
+    color: var(--cor-texto-claro);
+    font-size: 14px;
+}
+
+.modal-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-modal {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.btn-modal:hover {
+    transform: translateY(-2px);
+}
+
+.btn-fechar {
+    margin-top: 15px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--cor-texto-claro);
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Animação do modal */
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+/* =========================================
+   ETAPA 9 — RODAPÉ
+   ========================================= */
+
+footer {
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+
+    padding: 30px 20px 20px;
+
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer p {
+    margin: 5px 0;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 18px 0;
+}
+
+.footer-links a {
+    color: var(--cor-branco);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 6px 10px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cor-destaque);
+
+    transform: translateY(-2px);
+}
+
+.footer-copy {
+    padding-top: 15px;
+
+    margin-top: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    font-size: 12px;
+
+    opacity: 0.75;
+}
+/* GRID DOS SERVIÇOS DE TRANÇAS */
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.card-servico {
+    background-color: var(--cor-branco);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+.card-servico h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--cor-principal);
+}
+
+.card-servico p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+/* =========================================
+   ETAPA 10 — RESPONSIVIDADE
+   ========================================= */
+
+/* TABLETS */
+@media (min-width: 600px) {
+
+    .servicos-grid,
+    .menu-fastfood {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* COMPUTADORES */
+@media (min-width: 900px) {
+
+    .servicos-grid,
+    .menu-fastfood {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-servico,
+    .item-fastfood {
+        padding: 20px;
+    }
+
+}
+
+
+/* TELAS GRANDES */
+@media (min-width: 1200px) {
+
+    .servicos-grid,
+    .menu-fastfood {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+/* =========================================
+   PASSO 1 — ALERTA DE BOAS-VINDAS
+   ========================================= */
+
+.welcome-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+.welcome-box {
+    width: 100%;
+    max-width: 360px;
+
+    background: var(--cor-branco);
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-box h2 {
+    margin: 0 0 12px;
+
+    color: var(--cor-principal);
+
+    font-size: 22px;
+}
+
+.welcome-box p {
+    margin: 0 0 22px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+#welcomeButton {
+    border: none;
+
+    padding: 11px 28px;
+
+    border-radius: 10px;
+
+    background: var(--cor-principal);
+
+    color: var(--cor-branco);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+#welcomeButton:hover {
+    opacity: 0.9;
+}
+
+#welcomeButton:active {
+    transform: scale(0.95);
+}
+/* =========================================
+   PASSO 2 — PAINEL DE CONTATO
+   ========================================= */
+
+.contact-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 9998;
+
+    padding: 20px;
+}
+
+.contact-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 360px;
+
+    background: var(--cor-branco);
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.contact-box h2 {
+    margin: 0 0 8px;
+
+    color: var(--cor-principal);
+
+    font-size: 22px;
+}
+
+.contact-box > p {
+    margin: 0 0 22px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+.close-contact {
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.close-contact:hover {
+    background: #f1f1f1;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.contact-options button {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--cor-principal);
+
+    color: var(--cor-branco);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.contact-options button:hover {
+    opacity: 0.9;
+}
+
+.contact-options button:active {
+    transform: scale(0.97);
+}
+#btn-transas,
+#btn-fast-food,
+#btn-contato {
+    border: none;
+    border-radius: 10px;
+    padding: 9px 14px;
+    background: var(--cor-principal);
+    color: var(--cor-branco);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#btn-transas:hover,
+#btn-fast-food:hover,
+#btn-contato:hover {
+    opacity: 0.9;
+}
+
+#btn-transas:active,
+#btn-fast-food:active,
+#btn-contato:active {
+    transform: scale(0.95);
+}
+ /* =========================================
+    PASSO 5 — MODAL MARCAR HORÁRIO
+    ========================================= */
+
+.schedule-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 9997;
+
+    padding: 20px;
+}
+
+.schedule-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 360px;
+
+    background: var(--cor-branco);
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.schedule-box h2 {
+    margin: 0 0 12px;
+
+    color: var(--cor-principal);
+
+    font-size: 22px;
+}
+
+.schedule-box p {
+    margin: 0 0 22px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.close-schedule {
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.close-schedule:hover {
+    background: #f1f1f1;
+}
+
+#scheduleContactButton {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--cor-principal);
+
+    color: var(--cor-branco);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+#scheduleContactButton:hover {
+    opacity: 0.9;
+}
+
+#scheduleContactButton:active {
+    transform: scale(0.97);
+}
+/* =================================
+   ÍCONES — AJUSTE PROFISSIONAL
+   ================================= */
+
+i.bi {
+    font-size: 1.1em;
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Ícones dos títulos */
+h2 i.bi {
+    margin-right: 8px;
+    font-size: 0.95em;
+}
+
+/* Ícones dos botões */
+button i.bi,
+a i.bi {
+    margin-right: 6px;
+    font-size: 1em;
+    vertical-align: -1px;
+}
+
+/* Ícones dos serviços */
+h4 i.bi {
+    margin-right: 7px;
+    font-size: 1em;
+    vertical-align: middle;
+}
